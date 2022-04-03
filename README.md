@@ -2,6 +2,7 @@
 
 ### Date created
 2022/4/3
+(course start from 2021/12/1)
 
 ### Project Title
 Bikeshare_python_learning_project
