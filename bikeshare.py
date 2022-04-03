@@ -20,7 +20,7 @@ def get_filters():
             break
         except:
             print('Please input valiad numbers to index city!')
-   
+
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         try:
@@ -32,7 +32,7 @@ def get_filters():
             break
         except:
             print('Please input valiad number for month!')
-            
+
     while True:
         try:
             day = input("What is the day of week you are looking for? (all, monday, tuesday, ... sunday)").lower()
@@ -59,9 +59,9 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
 # load data file into a dataframe
-    
+
     df = pd.read_csv(CITY_DATA[city])
-    
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -151,7 +151,7 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     ttt=df['Trip Duration'].sum()
     print('Total travel time:', ttt,' sec')
-    
+
     # TO DO: display mean travel time
     mtt=df['Trip Duration'].mean()
     print('Total travel time:', mtt,' sec')
@@ -173,13 +173,13 @@ def user_stats(df,city):
 
     if city!='washington':
     # TO DO: Display counts of gender
-    
+
         user_genders = df['Gender'].value_counts()
         print(user_genders)
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
- 
+
         ecby = df['Birth Year'].min()
         print('Earliest customer birth year:',ecby)
 
@@ -192,7 +192,7 @@ def user_stats(df,city):
         print('Most common customer birth year',mccby)
     else:
         print("Washinton don't have gender& birth year data.")
-        
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -208,7 +208,7 @@ def ask_raw_data(df):
             i=i+5
         elif yes_or_no=='no':
             break
-        
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -219,7 +219,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df,city)
         ask_raw_data(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
