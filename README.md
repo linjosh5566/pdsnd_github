@@ -24,3 +24,9 @@ Rafael C
 Shmuel N
 Ahmet Can S
 Oscar Mauricio F
+
+### Comment
+I work in night shift, and i have to switch to daily time when off work.
+So time is extremely no enough for me, it takes a lot of effort to finish all these course.
+Those project are all challenging but i learned a lot.
+This might not be the end of learning, I would keep learn for machine learning stuff!
