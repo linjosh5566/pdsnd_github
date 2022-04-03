@@ -1,1 +1,4 @@
 .github/**
+bikeshare.py
+.gitignore
+.csv
